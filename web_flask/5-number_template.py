@@ -34,7 +34,7 @@ def c(text):
     Replaces any underscores in <text> with slashes.
     """
     text = text.replace("_", " ")
-    return "c {}.format(text)
+    return "c {}.format(text)"
 
 
 @app.route("/python", strict_slashes=False)
@@ -45,7 +45,7 @@ def python(text="is cool"):
     Replaces any underscores in <text> with slashes.
     """
     text = text.replace("_", " ")
-    return "ptyon {}.format(ext)
+    return "ptyon {}.format(exc)"
 
 
 @app.route("/number/<int:n>", strict_slashes=False)
@@ -61,4 +61,4 @@ def number_template(n):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5000)
